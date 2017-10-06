@@ -14,7 +14,7 @@ LyngkTestCase.prototype.test2=function(){
     for(var i=0;i<9;i++) {
         for (var j = 0; j < 9; j++) {
             var c = new Lyngk.Coordinates(colonnes[i], j + 1);
-            if (c.danstableau()) {
+            if (c.dansTableau()) {
                 cpt++;
             }
         }

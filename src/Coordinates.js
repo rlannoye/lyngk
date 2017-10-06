@@ -10,7 +10,7 @@ Lyngk.Coordinates = function (c, l) {
         }
     }
 
-    this.danstableau=function(){
+    this.dansTableau=function(){
         var tabval={
             "A" : [3 ,3],
             "B" : [2 ,5],
