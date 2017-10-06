@@ -22,3 +22,12 @@ LyngkTestCase.prototype.test2=function(){
     assertTrue(cpt===43);
 
 };
+
+LyngkTestCase.prototype.test3=function(){
+    var c='A';
+    var l=3;
+    var ch=c+l;
+    var c=new Lyngk.Coordinates(c,l);
+    console.log(ch);
+    assertTrue(c.toString()==ch);
+}
