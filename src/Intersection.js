@@ -14,10 +14,16 @@ Lyngk.Intersection=function(){
         return color;
     }
 
-    this.pion=function(c){
-        etat=Lyngk.State.ONE_PIECE;
+    this.pion=function(c) {
+        if (etat == Lyngk.State.ONE_PIECE) {
+            etat = Lyngk.State.STACK;
+        } else if (etat == Lyngk.State.VACANT) {
+            etat = Lyngk.State.ONE_PIECE
+        }
         color=c;
     }
+
+
 
 
 };
