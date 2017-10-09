@@ -28,7 +28,10 @@ Lyngk.Coordinates = function (c, l) {
         return false;
     }
     this.toString=function(){
-        return c+l;
+        if(this.est_valid()==false)
+            return "invalid";
+        else
+            return c+l;
     }
 
 };
