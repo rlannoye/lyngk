@@ -54,3 +54,9 @@ LyngkTestCase.prototype.test7etat=function(){
     var c = new Lyngk.Intersection();
     assertTrue(c.getEtat() === Lyngk.State.VACANT);
 };
+
+LyngkTestCase.prototype.test8color=function(){
+    var c = new Lyngk.Intersection();
+    c.placer(Lyngk.Color.BLUE);
+    assertTrue(c.getEtat,Lyngk.State.ONE_PIECE && c.getColor===Lyngk.Color.BLUE)
+};
