@@ -60,3 +60,10 @@ LyngkTestCase.prototype.test8color=function(){
     c.pion(Lyngk.Color.BLUE);
     assertTrue(c.getEtat()===Lyngk.State.ONE_PIECE && c.getColor()===Lyngk.Color.BLUE);
 };
+
+LyngkTestCase.prototype.test9color=function(){
+    var c = new Lyngk.Intersection();
+    c.pion(Lyngk.Color.BLUE);
+    c.pion(Lyngk.Color.RED);
+    assertTrue(c.getEtat()===Lyngk.State.STACK && c.getColor()===Lyngk.Color.RED);
+};
