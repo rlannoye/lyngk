@@ -51,6 +51,6 @@ LyngkTestCase.prototype.test6hash=function(){
 };
 
 LyngkTestCase.prototype.test7etat=function(){
-    var c = new Lyngk.Coordinates();
+    var c = new Lyngk.Intersection();
     assertTrue(c.getEtat() === Lyngk.State.VACANT);
 };
