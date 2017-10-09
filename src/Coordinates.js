@@ -46,5 +46,6 @@ Lyngk.Coordinates = function (c, l) {
         return new Lyngk.Coordinates(c,l)
     }
 
+    
 };
 
