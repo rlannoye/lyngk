@@ -66,4 +66,5 @@ LyngkTestCase.prototype.test9color=function(){
     c.pion(Lyngk.Color.BLUE);
     c.pion(Lyngk.Color.RED);
     assertTrue(c.getEtat()===Lyngk.State.STACK && c.getColor()===Lyngk.Color.RED);
+
 };
