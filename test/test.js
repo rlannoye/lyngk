@@ -43,3 +43,9 @@ LyngkTestCase.prototype.test5=function(){
     var c2=c.clone();
     assertTrue(c.getLigne()==c2.getLigne() && c.getColonne()==c2.getColonne());
 };
+
+LyngkTestCase.prototype.test6hash=function(){
+    var c = new Lyngk.Coordinates("a",3);
+    var test6=c.hash();
+    assertTrue(test6=13);
+};
