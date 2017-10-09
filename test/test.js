@@ -30,4 +30,10 @@ LyngkTestCase.prototype.test3=function(){
     var c=new Lyngk.Coordinates(c,l);
     console.log(ch);
     assertTrue(c.toString()==ch);
-}
+};
+
+LyngkTestCase.prototype.test4=function(){
+    var c =new Lyngk.Coordinates("A",1);
+    console.log(c);
+    assertTrue(c.toString()==="invalid");
+};
