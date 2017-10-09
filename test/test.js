@@ -45,7 +45,7 @@ LyngkTestCase.prototype.test5=function(){
 };
 
 LyngkTestCase.prototype.test6hash=function(){
-    var c = new Lyngk.Coordinates("a",3);
+    var c = new Lyngk.Coordinates("A",3);
     var test6=c.hash();
-    assertTrue(test6=13);
+    assertTrue(test6==12);
 };
