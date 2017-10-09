@@ -46,6 +46,9 @@ Lyngk.Coordinates = function (c, l) {
         return new Lyngk.Coordinates(c,l)
     }
 
-    
+    this.hash=function(){
+        return (colonne.charCodeAt(0)-64)*9 + ligne;
+    }
+
 };
 
