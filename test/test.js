@@ -37,3 +37,9 @@ LyngkTestCase.prototype.test4=function(){
     console.log(c);
     assertTrue(c.toString()==="invalid");
 };
+
+LyngkTestCase.prototype.test5=function(){
+    var c =new Lyngk.Coordinates("A",1);
+    var c2=c.clone();
+    assertTrue(c.getLigne()==c2.getLigne() && c.getColonne()==c2.getColonne());
+};
