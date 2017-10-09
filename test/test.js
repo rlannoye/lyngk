@@ -49,3 +49,8 @@ LyngkTestCase.prototype.test6hash=function(){
     var test6=c.hash();
     assertTrue(test6==12);
 };
+
+LyngkTestCase.prototype.test7etat=function(){
+    var c = new Lyngk.Coordinates();
+    assertTrue(c.getEtat() === Lyngk.State.VACANT);
+};
