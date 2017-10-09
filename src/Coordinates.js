@@ -34,5 +34,17 @@ Lyngk.Coordinates = function (c, l) {
             return c+l;
     }
 
+    this.getLigne=function(){
+        return ligne;
+    }
+
+    this.getColonne=function(){
+        return colonne;
+    }
+
+    this.clone=function(){
+        return new Lyngk.Coordinates(c,l)
+    }
+
 };
 
