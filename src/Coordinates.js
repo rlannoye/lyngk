@@ -21,12 +21,12 @@ Lyngk.Coordinates = function (c, l) {
             "G" : [3 ,9],
             "H" : [5 ,8],
             "I" : [7 ,7]
-        };
+        }
         if(l>=tabval[c][0] && l<=tabval[c][1]){
             return true;
         }
-        return false;
-    }
+    };
+
     this.toString=function(){
         if(this.est_valid()==false)
             return "invalid";

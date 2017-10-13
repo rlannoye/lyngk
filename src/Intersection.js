@@ -2,27 +2,27 @@
 
 Lyngk.State = {VACANT: 0, ONE_PIECE: 1, STACK: 2, FULL_STACK: 3};
 
-Lyngk.Intersection=function(){
+Lyngk.Intersection=function(c,color){
+    var coords=c;
     var etat=Lyngk.State.VACANT;
-    var color;
+    var listePiece=[];
+    var couleur=Lyngk.Color.VACANT;
 
     this.getEtat=function(){
         return etat;
-    }
+    };
 
-    this.getColor=function(){
-        return color;
-    }
+    this.setEtat=function(etat_p){
+        etat=Lyngk.State[etat_p];
+    };
 
-    this.pion=function(c) {
-        if (etat == Lyngk.State.ONE_PIECE) {
-            etat = Lyngk.State.STACK;
-        } else if (etat == Lyngk.State.VACANT) {
-            etat = Lyngk.State.ONE_PIECE
-        }
-        color=c;
-    }
+    this.getListPiece=function(){
+        return listePiece;
+    };
 
+    this.setListPiece=function(nouvellepiece){
+        listePiece.push(nouvellepiece);
+    };
 
 
 

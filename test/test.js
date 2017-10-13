@@ -12,8 +12,8 @@ LyngkTestCase.prototype.test2=function(){
     var cpt=0;
     var c;
     for(var i=0;i<9;i++) {
-        for (var j = 0; j < 9; j++) {
-            var c = new Lyngk.Coordinates(colonnes[i], j + 1);
+        for (var j = 1; j <= 9; j++) {
+            var c = new Lyngk.Coordinates(colonnes[i], j);
             if (c.dansTableau()) {
                 cpt++;
             }
@@ -54,9 +54,9 @@ LyngkTestCase.prototype.test7etat=function(){
     for(var i=0;i<lettres.length;i++){
         for(var j=1;j<=9;j++){
             var C=new Lyngk.Coordinates(lettres[i],j);
-            if(C.est_valid()){
+            if(C.dansTableau()){
                 var intersec=new Lyngk.Intersection(C);
-                if(intersec.getState() !==0){
+                if(intersec.getEtat() !==0){
                     compteur++;
                 }
             }
@@ -103,25 +103,74 @@ LyngkTestCase.prototype.test10color=function(){
     assertTrue(inter.getEtat()===3);
 };
 
+LyngkTestCase.prototype.test11=function(){
+    var lettres="ABCDEFGHI";
+    var compteur=0;
+    var newEngine=new Lyngk.Engine();
+    var tabIntersection=[];
+    var tabPiece=[];
+    for(var i=0;i<lettres.length;i++){
+        for(var j=1;j<=9;j++) {
+            var C = new Lyngk.Coordinates(lettres[i], j);
+            if (C.dansTableau()) {
+                tabIntersection.push(new Lyngk.Intersection(C,'BLUE'));
+                tabPiece.push(new Lyngk.Piece(C,'BLUE'));
+                newEngine.placerPion(tabIntersection[tabIntersection.length-1],tabPiece[tabPiece.length-1]);
+            }
+        }
+    }
+    //parcours des intersections
+    for(var i=0;i<tabIntersection.length;i++){
+        if(tabIntersection[i].getEtat()!==1){
+            compteur++;
+        }
+    }
+    assertTrue(compteur===0);
+};
 
+LyngkTestCase.prototype.test12=function(){
+    var newEngine=new Lyngk.Engine();
+    // recupere la liste des intersections au debut du jeu pour verifier les bonnes couleurs
+    var listeIntersection=newEngine.debutjeu();
+    var compteurBleu=0;
+    var compteurBlanc=0;
+    var compteurRouge=0;
+    var compteurVert=0;
+    var compteurIvoire=0;
+    var compteurNoir=0;
 
-/*
-LyngkTestCase.prototype.test9color=function(){
-    var c = new Lyngk.Intersection();
-    c.pion(Lyngk.Color.BLUE);
-    c.pion(Lyngk.Color.RED);
-    assertTrue(c.getEtat()===Lyngk.State.STACK && c.getColor()===Lyngk.Color.RED);
+    listeIntersection.forEach(function(element){
+        element.getListPiece().forEach(function(piece)
+        {
+            if(piece.getCouleur()===0){
+
+                compteurNoir++;
+            }
+            if(piece.getCouleur()===1){
+                compteurIvoire++;
+            }
+            if(piece.getCouleur()===2){
+                compteurBleu++;
+            }
+            if(piece.getCouleur()===3){
+                compteurRouge++;
+            }
+            if(piece.getCouleur()===4){
+                compteurVert++;
+            }
+            if(piece.getCouleur()===5){
+                compteurBlanc++;
+            }
+        });
+    });
+    //129=43*3
+
+    assertTrue(compteurBlanc===129 &&
+        compteurVert===43 &&
+        compteurRouge===43 &&
+        compteurBleu===43 &&
+        compteurIvoire===43 &&
+        compteurNoir===43);
 
 };
-*/
-
-//LyngkTestCase.prototype.test10color=function(){
-  //  var c = new Lyngk.Intersection();
-    //c.pion(Lyngk.Color.BLUE);
-    //c.pion(Lyngk.Color.RED);
-    //c.pion(Lyngk.Color.BLACK);
-    //c.pion(Lyngk.Color.GREEN);
-    //c.pion(Lyngk.Color.IVORY);
-    //assertTrue(c.getEtat()===Lyngk.State.FULL_STACK && c.getColor()===Lyngk.Color.IVORY);
-//};
 
