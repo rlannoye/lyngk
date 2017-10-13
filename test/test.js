@@ -69,12 +69,43 @@ LyngkTestCase.prototype.test7etat=function(){
 
 
 
-/*LyngkTestCase.prototype.test8color=function(){
-    var c = new Lyngk.Intersection();
-    c.pion(Lyngk.Color.BLUE);
-    assertTrue(c.getEtat()===Lyngk.State.ONE_PIECE && c.getColor()===Lyngk.Color.BLUE);
+LyngkTestCase.prototype.test8color=function(){
+    var newEngine=new Lyngk.Engine();
+    var coords =new Lyngk.Coordinates('B',5);
+    var inter=new Lyngk.Intersection(coords,'BLUE');
+    var piece=new Lyngk.Piece(coords,'BLUE');
+    newEngine.placerPion(inter,piece);
+    assertTrue(inter.getEtat()===1);
 };
 
+LyngkTestCase.prototype.test9color=function(){
+    var newEngine=new Lyngk.Engine();
+    var coords =new Lyngk.Coordinates('B',5);
+    var inter=new Lyngk.Intersection(coords,'RED');
+    var piece1=new Lyngk.Piece(coords,'BLUE');
+    var piece2=new Lyngk.Piece(coords,'RED');
+    newEngine.placerPion(inter,piece1);
+    newEngine.placerPion(inter,piece2);
+    assertTrue(inter.getEtat()===2);
+};
+
+LyngkTestCase.prototype.test10color=function(){
+    var newEngine=new Lyngk.Engine();
+    var coords =new Lyngk.Coordinates('B',5);
+    var inter=new Lyngk.Intersection(coords,'RED');
+    var piece1=new Lyngk.Piece(coords,'BLUE');
+    var piece2=new Lyngk.Piece(coords,'RED');
+    newEngine.placerPion(inter,piece1);
+    newEngine.placerPion(inter,piece2);
+    newEngine.placerPion(inter,piece2);
+    newEngine.placerPion(inter,piece2);
+    newEngine.placerPion(inter,piece1);
+    assertTrue(inter.getEtat()===3);
+};
+
+
+
+/*
 LyngkTestCase.prototype.test9color=function(){
     var c = new Lyngk.Intersection();
     c.pion(Lyngk.Color.BLUE);
@@ -83,6 +114,7 @@ LyngkTestCase.prototype.test9color=function(){
 
 };
 */
+
 //LyngkTestCase.prototype.test10color=function(){
   //  var c = new Lyngk.Intersection();
     //c.pion(Lyngk.Color.BLUE);
