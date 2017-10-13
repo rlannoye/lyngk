@@ -67,6 +67,8 @@ LyngkTestCase.prototype.test7etat=function(){
 
 
 
+
+
 /*LyngkTestCase.prototype.test8color=function(){
     var c = new Lyngk.Intersection();
     c.pion(Lyngk.Color.BLUE);
