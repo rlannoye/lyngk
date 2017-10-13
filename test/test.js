@@ -65,6 +65,8 @@ LyngkTestCase.prototype.test7etat=function(){
     assertTrue(compteur===0);
 };
 
+
+
 /*LyngkTestCase.prototype.test8color=function(){
     var c = new Lyngk.Intersection();
     c.pion(Lyngk.Color.BLUE);
