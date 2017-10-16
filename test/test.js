@@ -81,9 +81,9 @@ LyngkTestCase.prototype.test8color=function(){
 LyngkTestCase.prototype.test9color=function(){
     var newEngine=new Lyngk.Engine();
     var coords =new Lyngk.Coordinates('B',5);
-    var inter=new Lyngk.Intersection(coords,'RED');
-    var piece1=new Lyngk.Piece(coords,'BLUE');
-    var piece2=new Lyngk.Piece(coords,'RED');
+    var inter=new Lyngk.Intersection(coords);
+    var piece1=new Lyngk.Piece('BLUE');
+    var piece2=new Lyngk.Piece('RED');
     newEngine.placerPion(inter,piece1);
     newEngine.placerPion(inter,piece2);
     assertTrue(inter.getEtat()===2);
@@ -92,9 +92,9 @@ LyngkTestCase.prototype.test9color=function(){
 LyngkTestCase.prototype.test10color=function(){
     var newEngine=new Lyngk.Engine();
     var coords =new Lyngk.Coordinates('B',5);
-    var inter=new Lyngk.Intersection(coords,'RED');
-    var piece1=new Lyngk.Piece(coords,'BLUE');
-    var piece2=new Lyngk.Piece(coords,'RED');
+    var inter=new Lyngk.Intersection(coords);
+    var piece1=new Lyngk.Piece('BLUE');
+    var piece2=new Lyngk.Piece('RED');
     newEngine.placerPion(inter,piece1);
     newEngine.placerPion(inter,piece2);
     newEngine.placerPion(inter,piece2);
@@ -113,8 +113,8 @@ LyngkTestCase.prototype.test11=function(){
         for(var j=1;j<=9;j++) {
             var C = new Lyngk.Coordinates(lettres[i], j);
             if (C.dansTableau()) {
-                tabIntersection.push(new Lyngk.Intersection(C,'BLUE'));
-                tabPiece.push(new Lyngk.Piece(C,'BLUE'));
+                tabIntersection.push(new Lyngk.Intersection(C));
+                tabPiece.push(new Lyngk.Piece(C));
                 newEngine.placerPion(tabIntersection[tabIntersection.length-1],tabPiece[tabPiece.length-1]);
             }
         }
@@ -130,8 +130,9 @@ LyngkTestCase.prototype.test11=function(){
 
 LyngkTestCase.prototype.test12=function(){
     var newEngine=new Lyngk.Engine();
+    newEngine.debutjeu();
     // recupere la liste des intersections au debut du jeu pour verifier les bonnes couleurs
-    var listeIntersection=newEngine.debutjeu();
+    var listeIntersection=newEngine.gettabIntersection();
     var compteurBleu=0;
     var compteurBlanc=0;
     var compteurRouge=0;
@@ -163,16 +164,18 @@ LyngkTestCase.prototype.test12=function(){
             }
         });
     });
-    //129=43*3
 
-    assertTrue(compteurBlanc===129 &&
-        compteurVert===43 &&
-        compteurRouge===43 &&
-        compteurBleu===43 &&
-        compteurIvoire===43 &&
-        compteurNoir===43);
+    console.log(compteurBlanc);
+
+    assertTrue(compteurBlanc===3 &&
+        compteurVert===8 &&
+        compteurRouge===8 &&
+        compteurBleu===8 &&
+        compteurIvoire===8 &&
+        compteurNoir===8);
 
 
 };
+
 
 
