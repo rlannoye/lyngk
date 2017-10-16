@@ -191,6 +191,13 @@ LyngkTestCase.prototype.test13=function() {
     assertTrue(compteur===0);
 };
 
-
+LyngkTestCase.prototype.test14=function() {
+    var newEngine = new Lyngk.Engine();
+    newEngine.debutjeu();
+    var listeIntersection = newEngine.gettabIntersection();
+    var aleatoire = Math.floor(Math.random() * 43);
+    var listePiece =listeIntersection[aleatoire].getListPiece();
+    assertTrue(listeIntersection[aleatoire].getCouleur()===listePiece[listePiece.length-1].getCouleur());
+};
 
 
