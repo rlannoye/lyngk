@@ -23,6 +23,9 @@ Lyngk.Intersection=function(c){
         listePiece.push(nouvellepiece);
     };
 
+    this.getCouleur=function(){
+        return listePiece[listePiece.length-1].getCouleur();
+    }
 
 
 };
