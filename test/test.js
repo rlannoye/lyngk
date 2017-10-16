@@ -177,5 +177,20 @@ LyngkTestCase.prototype.test12=function(){
 
 };
 
+LyngkTestCase.prototype.test13=function() {
+    var newEngine = new Lyngk.Engine();
+    newEngine.debutjeu();
+    var listeIntersection = newEngine.gettabIntersection();
+    var compteur=0;
+    listeIntersection.forEach(function (element){
+        var hauteur=element.getListPiece().length;
+        if(hauteur!==1)
+            compteur++;
+
+    });
+    assertTrue(compteur===0);
+};
+
+
 
 
