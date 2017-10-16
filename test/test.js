@@ -165,7 +165,6 @@ LyngkTestCase.prototype.test12=function(){
         });
     });
 
-    console.log(compteurBlanc);
 
     assertTrue(compteurBlanc===3 &&
         compteurVert===8 &&
@@ -197,7 +196,7 @@ LyngkTestCase.prototype.test14=function() {
     var listeIntersection = newEngine.gettabIntersection();
     var aleatoire = Math.floor(Math.random() * 43);
     var listePiece =listeIntersection[aleatoire].getListPiece();
-    assertTrue(listeIntersection[aleatoire].getCouleur()===listePiece[listePiece.length-1].getCouleur());
+    assertTrue(listeIntersection[aleatoire].getCouleur() === listePiece[listePiece.length-1].getCouleur());
 };
 
 
