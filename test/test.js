@@ -172,5 +172,6 @@ LyngkTestCase.prototype.test12=function(){
         compteurIvoire===43 &&
         compteurNoir===43);
 
+    
 };
 
