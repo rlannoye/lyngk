@@ -199,4 +199,15 @@ LyngkTestCase.prototype.test14=function() {
     assertTrue(listeIntersection[aleatoire].getCouleur() === listePiece[listePiece.length-1].getCouleur());
 };
 
+LyngkTestCase.prototype.test15=function() {
+    var newEngine=new Lyngk.Engine();
+    newEngine.debutjeu();
+    var coords =new Lyngk.Coordinates('A',3);
+    var coords2 =new Lyngk.Coordinates('B',3);
+    var couleurPiece1=newEngine.getIntersection(coords).getCouleur();
+    newEngine.deplacement(coords,coords2);
+    var couleurPiece2=newEngine.getIntersection(coords2).getCouleur();
+    assertTrue(couleurPiece1===couleurPiece2 );
+};
+
 
