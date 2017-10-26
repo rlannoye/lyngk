@@ -27,5 +27,16 @@ Lyngk.Intersection=function(c){
         return listePiece[listePiece.length-1].getCouleur();
     }
 
+    this.getCoords=function(){
+        return coords;
+    }
+
+    this.putPiece=function(s){
+        listePiece.push(s.getListPiece()[0]);
+    }
+
+    this.removePiece=function(){
+        listePiece=[];
+    }
 
 };

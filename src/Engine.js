@@ -48,4 +48,33 @@ Lyngk.Engine = function () {
             }
         }
     }
+
+     this.getIntersection=function(c){
+        var i = 0;
+        var found = false;
+
+        while (!found && i < tabIntersection.length) {
+            var coordinates = tabIntersection[i].getCoords();
+
+            if (coordinates.getLigne() === c.getLigne() && coordinates.getColonne() === c.getColonne()) {
+                found = true;
+            } else {
+                ++i;
+            }
+        }
+        if (i < tabIntersection.length) {
+            return tabIntersection[i];
+        } else {
+            return null;
+        }
+    }
+
+    this.deplacement=function(c1,c2){
+        var source = this.getIntersection(c1);
+        var destination = this.getIntersection(c2);
+        destination.putPiece(source);
+        source.removePiece();
+
+    }
+
 };
