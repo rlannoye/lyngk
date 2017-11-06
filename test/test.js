@@ -301,3 +301,17 @@ LyngkTestCase.prototype.test17=function(){
     assertTrue(coords5.getTaillePile()===5 && coords6.getTaillePile()===1);
 };
 */
+
+/*
+LyngkTestCase.prototype.test21=function(){
+    var newEngine=new Lyngk.Engine();
+    newEngine.debutjeu();
+    var coords=new Lyngk.Coordinates('A',3);
+    var coords2=new Lyngk.Coordinates('B',3);
+    var coords3=new Lyngk.Coordinates('C',3);
+    newEngine.deplacement(coords,coords2);
+    //deplacement impossible, une piece ne peut pas etre deplacee sur une pile
+    newEngine.deplacement(coords3,coords2);
+    assertTrue(coords2.getTaillePile()===2 && coords3.getTaillePile()===1);
+};
+*/
