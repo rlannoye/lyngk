@@ -120,6 +120,11 @@ Lyngk.Engine = function () {
         if(tabIntersection[c1].getEtat() === 1 && tabIntersection[c2].getEtat() === 2){
             possible=false;
         }
+
+        //une pile ne peut pas etre deplacee sur une pile de taille superieure (histoire 22)
+        if(tabIntersection[c1].getTaillePile() < tabIntersection[c2].getTaillePile()){
+            possible=false;
+        }
     }
     */
 
