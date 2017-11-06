@@ -315,3 +315,19 @@ LyngkTestCase.prototype.test21=function(){
     assertTrue(coords2.getTaillePile()===2 && coords3.getTaillePile()===1);
 };
 */
+
+/*
+LyngkTestCase.prototype.test22=function(){
+    var newEngine=new Lyngk.Engine();
+    newEngine.debutjeu();
+    var coords=new Lyngk.Coordinates('I',7);
+    var coords2=new Lyngk.Coordinates('H',6);
+    var coords3=new Lyngk.Coordinates('G',4);
+    var coords4=new Lyngk.Coordinates('G',5);
+    var coords5=new Lyngk.Coordinates('G',6);
+    newEngine.deplacement(coords,coords2);
+    newEngine.deplacement(coords3,coords4);
+    newEngine.deplacement(coords4,coords5);
+    assertTrue(coords5.getTaillePile()===3 && coords2.getTaillePile()===2);
+};
+*/
