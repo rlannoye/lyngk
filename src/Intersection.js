@@ -39,4 +39,8 @@ Lyngk.Intersection=function(c){
         listePiece=[];
     }
 
+    this.getTaillePile=function(){
+        return listePiece.length;
+    }
+
 };
