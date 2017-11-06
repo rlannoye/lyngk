@@ -103,6 +103,13 @@ Lyngk.Engine = function () {
                 possible = true;
             }
         }
+
+        var soustractionColonne = c1.getColonne()-c2.getColonne();
+
+        //si va au-dela de la premiere pile rencontree,alors faux (histoire 19)
+        if(soustractionColonne > 1 || soustractionColonne < -1){
+            possible=false;
+        }
     }
     */
 
