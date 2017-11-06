@@ -233,3 +233,16 @@ LyngkTestCase.prototype.test16=function(){
     assertTrue((couleurPiece1===couleurPiece2) && compteur==0);
 };
 */
+
+LyngkTestCase.prototype.test17=function(){
+    var newEngine=new Lyngk.Engine();
+    newEngine.debutjeu();
+    var coords1=new Lyngk.Coordinates('B',2);
+    var inter=new Lyngk.Intersection(coords1);
+    var coords2=new Lyngk.Coordinates('B',3);
+    var couleurPiece1=newEngine.getIntersection(coords1).getCouleur();
+    newEngine.deplacement(coords1,coords2);
+    var couleurPiece2=newEngine.getIntersection(coords2).getCouleur();
+    newEngine.deplacement(coords2,coords1);
+    assertTrue(inter.getEtat()===0);
+};
