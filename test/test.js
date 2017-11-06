@@ -264,3 +264,21 @@ LyngkTestCase.prototype.test17=function(){
     assertTrue(coords.compteur===0 && coords2.compteur===0);
 };
 */
+
+/*LyngkTestCase.prototype.test19=function(){
+    var newEngine=new Lyngk.Engine();
+    newEngine.debutjeu();
+    var listeIntersection = newEngine.gettabIntersection();
+    var compteur=0;
+    var coords=new Lyngk.Coordinates('H',5);
+    var coords2=new Lyngk.Coordinates('F',5);
+    newEngine.deplacement(coords,coords2);
+    listeIntersection.forEach(function (element){
+        var hauteur=element.getListPiece().length;
+        if(hauteur!==1)
+            compteur++;
+
+    });
+    assertTrue(coords.compteur===0 && coords2.compteur===0);
+};
+*/
