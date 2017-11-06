@@ -210,20 +210,26 @@ LyngkTestCase.prototype.test15=function() {
     assertTrue(couleurPiece1===couleurPiece2 );
 };
 
+/*
 LyngkTestCase.prototype.test16=function(){
     var newEngine=new Lyngk.Engine();
     newEngine.debutjeu();
+    var listeIntersection = newEngine.gettabIntersection();
+    var compteur=0;
     var coords=new Lyngk.Coordinates('A',3);
     var coords2=new Lyngk.Coordinates('B',3);
     newEngine.deplacement(coords,coords2);
     var coords3=new Lyngk.Coordinates('B',3);
     var coords4=new Lyngk.Coordinates('B',2);
-    var couleurPiece1=newEngine.getIntersection(coords).getCouleur();
+    var couleurPiece1=newEngine.getIntersection(coords3).getCouleur();
     newEngine.deplacement(coords3,coords4);
-    var couleurPiece2=newEngine.getIntersection(coords2).getCouleur();
-    assertTrue((couleurPiece1===couleurPiece2) && (getListPiece().length===3));
-    // verifier que la pile est egale a 3
-    // verifie que b3 est vide
+    var couleurPiece2=newEngine.getIntersection(coords4).getCouleur();
+    listeIntersection.forEach(function (element){
+    var hauteur=element.getListPiece().length;
+    if(hauteur!==3)
+        compteur++;
+
+    });
+    assertTrue((couleurPiece1===couleurPiece2) && compteur==0);
 };
-
-
+*/
