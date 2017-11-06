@@ -110,6 +110,11 @@ Lyngk.Engine = function () {
         if(soustractionColonne > 1 || soustractionColonne < -1){
             possible=false;
         }
+
+        //hauteur maximale de la pile est egale a 5 (histoire 20), 3 = Lyngk.State.FULL_STACK
+        if(tabIntersection[c1].getEtat() === 3) {
+            possible = false;
+        }
     }
     */
 
