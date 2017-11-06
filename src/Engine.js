@@ -115,6 +115,11 @@ Lyngk.Engine = function () {
         if(tabIntersection[c1].getEtat() === 3) {
             possible = false;
         }
+
+        //une piece seule ne peut pas etre deplacee sur une pile (histoire 21), 1=Lyngk.State.ONE_PIECE,2=Lyngk.State.STACK
+        if(tabIntersection[c1].getEtat() === 1 && tabIntersection[c2].getEtat() === 2){
+            possible=false;
+        }
     }
     */
 
