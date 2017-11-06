@@ -77,4 +77,33 @@ Lyngk.Engine = function () {
 
     }
 
+    /*this.deplacementsPossibles(c1,c2){
+        var possible=false;
+        //deplacement vers le haut ou vers le bas sur la meme colonne
+        if(c1.getColonne() === c2.getColonne()){
+            var soustractionLigne = c1.getLigne() - c2.getLigne();
+            //si la soustraction est egale a 1 (vers le haut) ou -1 (vers le bas)
+            if(soustractionLigne === 1 || soustractionLigne === -1){
+                possible = true;
+            }
+        }
+        //deplacement vers la gauche sur la meme ligne ou celle d en dessous
+        else if(c1.getColonne()< c2.getColonne()){
+            var soustractionLigne = c1.getLigne() - c2.getLigne();
+            //si la soustraction est egale a 0 (meme ligne) ou -1 (vers le bas)
+            if(soustractionLigne === 0 || soustractionLigne === -1){
+                possible = true;
+            }
+        }
+        //deplacement vers la droite
+        else if(c1.getColonne() > c2.getColonne()){
+            var soustractionLigne = c1.getLigne() - c2.getLigne();
+            //si la soustraction est egale a 0(meme ligne) ou 1(vers le haut)
+            if(soustractionLigne === 1 || soustractionLigne === 0){
+                possible = true;
+            }
+        }
+    }
+    */
+
 };
