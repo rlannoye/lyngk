@@ -282,3 +282,22 @@ LyngkTestCase.prototype.test17=function(){
     assertTrue(coords.compteur===0 && coords2.compteur===0);
 };
 */
+
+/*LyngkTestCase.prototype.test20=function(){
+    var newEngine=new Lyngk.Engine();
+    newEngine.debutjeu();
+    var coords=new Lyngk.Coordinates('A',3);
+    var coords2=new Lyngk.Coordinates('B',3);
+    var coords3=new Lyngk.Coordinates('B',2);
+    var coords4=new Lyngk.Coordinates('C',2);
+    var coords5=new Lyngk.Coordinates('D',2);
+    var coords6=new Lyngk.Coordinates('E',2);
+    newEngine.deplacement(coords,coords2);
+    newEngine.deplacement(coords2,coords3);
+    newEngine.deplacement(coords3,coords4);
+    newEngine.deplacement(coords4,coords5);
+    //la pile ne peut pas etre deplacee en E2 car la pile searit trop haute
+    newEngine.deplacement(coords5,coords6);
+    assertTrue(coords5.getTaillePile()===5 && coords6.getTaillePile()===1);
+};
+*/
