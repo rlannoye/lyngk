@@ -332,6 +332,7 @@ LyngkTestCase.prototype.test22=function(){
 };
 */
 
+/*
 LyngkTestCase.prototype.test23=function(){
     var newEngine=new Lyngk.Engine();
     newEngine.debutjeu();
@@ -346,3 +347,4 @@ LyngkTestCase.prototype.test23=function(){
     newEngine.deplacement(coords4,coords5);
     assertTrue(coords5.getTaillePile()===5);
 };
+*/
