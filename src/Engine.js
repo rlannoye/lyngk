@@ -76,11 +76,11 @@ Lyngk.Engine = function () {
         source.removePiece();
 
     }
-
-    /*this.deplacementsPossibles(c1,c2){
+/*
+    this.deplacementsPossibles(c1,c2){
         var possible=false;
         //deplacement vers le haut ou vers le bas sur la meme colonne
-        if(c1.getColonne() === c2.getColonne()){
+        if(c1.getColonne().charCodeAt(0) === c2.getColonne().charCodeAt(0)){
             var soustractionLigne = c1.getLigne() - c2.getLigne();
             //si la soustraction est egale a 1 (vers le haut) ou -1 (vers le bas)
             if(soustractionLigne === 1 || soustractionLigne === -1){
@@ -88,7 +88,7 @@ Lyngk.Engine = function () {
             }
         }
         //deplacement vers la gauche sur la meme ligne ou celle d en dessous
-        else if(c1.getColonne()< c2.getColonne()){
+        else if(c1.getColonne().charCodeAt(0)< c2.getColonne().charCodeAt(0)){
             var soustractionLigne = c1.getLigne() - c2.getLigne();
             //si la soustraction est egale a 0 (meme ligne) ou -1 (vers le bas)
             if(soustractionLigne === 0 || soustractionLigne === -1){
@@ -96,7 +96,7 @@ Lyngk.Engine = function () {
             }
         }
         //deplacement vers la droite
-        else if(c1.getColonne() > c2.getColonne()){
+        else if(c1.getColonne().charCodeAt(0) > c2.getColonne().charCodeAt(0)){
             var soustractionLigne = c1.getLigne() - c2.getLigne();
             //si la soustraction est egale a 0(meme ligne) ou 1(vers le haut)
             if(soustractionLigne === 1 || soustractionLigne === 0){
@@ -104,7 +104,7 @@ Lyngk.Engine = function () {
             }
         }
 
-        var soustractionColonne = c1.getColonne()-c2.getColonne();
+        var soustractionColonne = (c1.getColonne().charCodeAt(0))-(c2.getColonne().charCodeAt(0));
 
         //si va au-dela de la premiere pile rencontree,alors faux (histoire 19)
         if(soustractionColonne > 1 || soustractionColonne < -1){
