@@ -353,5 +353,15 @@ LyngkTestCase.prototype.test24=function(){
     var newEngine=new Lyngk.Engine();
     newEngine.debutjeu();
     assertTrue(newEngine.getJoueurCourant()===Lyngk.Players.Joueur1);
-    
+
 };
+
+/*LyngkTestCase.prototype.test25=function(){
+    var newEngine=new Lyngk.Engine();
+    newEngine.debutjeu();
+    var coords = Lyngk.Coordinates('A',3);
+    var coords2= Lyngk.Coordinates('B',3);
+    newEngine.deplacement(coords,coords2);
+    assertTrue(newEngine.getJoueurCourant()===Lyngk.Players.Joueur2);
+};
+*/
