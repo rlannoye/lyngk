@@ -348,3 +348,9 @@ LyngkTestCase.prototype.test23=function(){
     assertTrue(coords5.getTaillePile()===5);
 };
 */
+
+LyngkTestCase.prototype.test24=function(){
+    var newEngine=new Lyngk.Engine();
+    newEngine.debutjeu();
+    assertTrue(newEngine.getJoueurCourant()===Lyngk.Players.Joueur1);
+};
