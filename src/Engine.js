@@ -72,8 +72,11 @@ Lyngk.Engine = function () {
     this.deplacement=function(c1,c2){
         var source = this.getIntersection(c1);
         var destination = this.getIntersection(c2);
-        destination.putPiece(source);
-        source.removePiece();
+        //if(deplacementsPossibles(c1,c2)) {
+            destination.putPiece(source);
+            source.removePiece();
+       // }
+
 
     }
 /*
@@ -126,6 +129,6 @@ Lyngk.Engine = function () {
             possible=false;
         }
     }
-    */
+*/
 
 };
