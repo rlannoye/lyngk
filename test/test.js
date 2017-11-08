@@ -331,3 +331,18 @@ LyngkTestCase.prototype.test22=function(){
     assertTrue(coords5.getTaillePile()===3 && coords2.getTaillePile()===2);
 };
 */
+
+LyngkTestCase.prototype.test23=function(){
+    var newEngine=new Lyngk.Engine();
+    newEngine.debutjeu();
+    var coords=new Lyngk.Coordinates('F',3);
+    var coords2=new Lyngk.Coordinates('F',4);
+    var coords3=new Lyngk.Coordinates('F',5);
+    var coords4=new Lyngk.Coordinates('F',6);
+    var coords5=new Lyngk.Coordinates('F',7);
+    newEngine.deplacement(coords,coords2);
+    newEngine.deplacement(coords2,coords3);
+    newEngine.deplacement(coords3,coords4);
+    newEngine.deplacement(coords4,coords5);
+    assertTrue(coords5.getTaillePile()===5);
+};
