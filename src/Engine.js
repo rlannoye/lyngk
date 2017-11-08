@@ -2,13 +2,19 @@
 
 // enums definition
 Lyngk.Color = {BLACK: 0, IVORY: 1, BLUE: 2, RED: 3, GREEN: 4, WHITE: 5};
+Lyngk.Players = {Joueur1:0,Joueur2:1};
 
 Lyngk.Engine = function () {
 
     var tabIntersection=[];
+    var joueurCourant;
 
     this.gettabIntersection=function(){
         return tabIntersection;
+    }
+
+    this.getJoueurCourant=function(){
+        return joueurCourant;
     }
 
     this.placerPion=function(inter,piece){
@@ -29,6 +35,8 @@ Lyngk.Engine = function () {
         var lettres = "ABCDEFGHI";
         var compteurcouleur=[0,0,0,0,0,0];
         var aleatoire;
+
+        joueurCourant=Lyngk.Players.Joueur1;
 
         for (var i = 0; i < lettres.length; i++) {
             for (var j = 1; j <= 9; j++) {
