@@ -353,4 +353,5 @@ LyngkTestCase.prototype.test24=function(){
     var newEngine=new Lyngk.Engine();
     newEngine.debutjeu();
     assertTrue(newEngine.getJoueurCourant()===Lyngk.Players.Joueur1);
+    
 };
