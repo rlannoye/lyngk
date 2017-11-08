@@ -128,6 +128,14 @@ Lyngk.Engine = function () {
         if(tabIntersection[c1].getTaillePile() < tabIntersection[c2].getTaillePile()){
             possible=false;
         }
+
+        //on parcourt toutes les pieces de l alignement
+        for(var i=0; i<tabIntersection[c1].getListPiece().length;i++){
+            //faux si 2 pieces ont la meme couleur et que ca n est pas la blanche
+            if((tabIntersection[c1].getCouleur()===tabIntersection[c2].getCouleur()) && getCouleur() !=5){
+                possible=false;
+            }
+        }
     }
 */
 
