@@ -2,45 +2,44 @@
 
 Lyngk.State = {VACANT: 0, ONE_PIECE: 1, STACK: 2, FULL_STACK: 3};
 
-Lyngk.Intersection=function(c){
-    var coords=c;
-    var etat=Lyngk.State.VACANT;
-    var listePiece=[];
+Lyngk.Intersection = function (c) {
+    var coordinates = c;
+    var state = Lyngk.State.VACANT;
+    var listOfPieces = [];
 
-    this.getEtat=function(){
-        return etat;
+    this.getState = function () {
+        return state;
     };
 
-    this.setEtat=function(etat_p){
-        etat=Lyngk.State[etat_p];
+    this.setState = function (stateP) {
+        state = Lyngk.State[stateP];
     };
 
-    this.getListPiece=function(){
-        return listePiece;
+    this.getListPiece = function () {
+        return listOfPieces;
     };
 
-    this.setListPiece=function(nouvellepiece){
-        listePiece.push(nouvellepiece);
+    this.setListPiece = function (newPieces) {
+        listOfPieces.push(newPieces);
     };
 
-    this.getCouleur=function(){
-        return listePiece[listePiece.length-1].getCouleur();
-    }
+    this.getColor = function () {
+        return listOfPieces[listOfPieces.length - 1].getColor();
+    };
 
-    this.getCoords=function(){
-        return coords;
-    }
+    this.getCoordinates = function () {
+        return coordinates;
+    };
 
-    this.putPiece=function(s){
-        listePiece.push(s.getListPiece()[0]);
-    }
+    this.putPiece = function (s) {
+        listOfPieces.push(s.getListPiece()[0]);
+    };
 
-    this.removePiece=function(){
-        listePiece=[];
-    }
+    this.removePiece = function () {
+        listOfPieces = [];
+    };
 
-    this.getTaillePile=function(){
-        return listePiece.length;
-    }
-
+    this.getHeightStack = function () {
+        return listOfPieces.length;
+    };
 };
